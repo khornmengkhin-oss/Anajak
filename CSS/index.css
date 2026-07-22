@@ -1,0 +1,159 @@
+nav a[href="index.html"]::after {
+    width: 100%;
+}
+
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+}
+
+.hero-section__inner {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-section__inner h1 {
+    font-family: "Cinzel", serif;
+    font-size: 3.25rem;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+.hero-section__inner p {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1.8rem;
+}
+
+.hero-button {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.button-pro {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--color-ink);
+    border: 1px solid var(--color-main);
+    padding: 8px 20px;
+    border-radius: 40px;
+    font-size: 1.2rem;
+}
+
+#hero-changing-image {
+    width: 38%;
+    height: 520px;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform 1.2s ease-in-out;
+    box-shadow: 0 24px 70px rgba(133, 117, 117, 0.28);
+    border-radius: 20px;
+}
+
+.extra-info {
+    display: flex;
+    gap: 2rem;
+    margin: 0 10rem;
+    justify-content: space-between;
+}
+
+.main-card {
+    border: 1px solid var(--color-mian);
+    background-color: var(--color-main);
+    color: #ffffff;
+    padding: 3rem;
+}
+
+.main-card h2 {
+    font-family: "Cinzel", serif;
+    font-size: 1.8rem;
+    padding-top: 0;
+    padding: 0;
+    margin:0;
+}
+
+.main-card p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.1rem;
+}
+
+.home-button {
+    border: 1px solid #e25f5f;
+    background-color:#e25f5f;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 8px 20px;
+    border-radius: 40px;
+    font-size: 1.2rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card {
+    background-color: #f9f4f1;
+    padding: 2rem;
+    text-align: center;
+}
+
+.card h2 {
+    font-family: "Cinzel", serif;
+    padding-top: 0;
+}
+
+.card p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+}
+
+.card i {
+    color: var(--color-main);
+    border: 1px solid var(--color-main);
+    border-radius: 50%;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.anajak-background {
+    background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0.32) 48%, rgba(0, 0, 0, 0.58) 100%),
+     url(../asset/brooke-lark-IDonmDWrXO8-unsplash.jpg);
+    width: 100vw;
+    height: 40vh;
+    background-size: cover;
+    background-position: center 59%;
+    align-content: center;
+}
+
+.anajak-background__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10rem;
+}
+
+.anajak-background__inner p {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0;
+}
+
+.anajak-background__inner span {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 1.35rem;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}

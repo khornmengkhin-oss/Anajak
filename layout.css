@@ -1,0 +1,165 @@
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 0;
+}
+
+.site-header__inner {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 24px 70px rgba(133, 117, 117, 0.28);
+    background: #ffffff;
+    padding: 15px 250px 15px 50px;
+}
+
+.site-name {
+    font-family: "Cinzel", serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: #000000;
+    font-size: 2.2rem;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.site-nav a {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+    color: #cd0707;
+    transition: 0.5s;
+}
+
+nav a {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 6px;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #cd0707;
+    transition: 0.3s;
+}
+
+nav a[aria-current="page"]::after {
+    width: 100%;
+}
+
+.button {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 8px 20px;
+    margin: 0;
+    border: 1px solid #cd0707;
+    background-color: #cd0707;
+    border-radius: 40px;
+}
+
+.button:hover {
+    opacity: 0.6;
+    transition: 0.5s;
+}
+
+footer {
+    background-color: #211f26;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 200px;
+}
+
+.site-footer__inner {
+    display: flex;
+}
+
+.site-footer__inner i {
+    color: #cd0707;
+    font-size: 1.2rem;
+    padding: 5px 7px;
+}
+
+.site-footer__inner h3 {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    line-height: 0.8;
+}
+
+footer > div > div > div:last-child h3 {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    width: 35px;
+    height: 35px;
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    border-radius: 50%;
+    color: rgba(255, 255, 255, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.site-footer__outer {
+    justify-items: center;
+    border-top: 1px solid  rgba(255, 255, 255, 0.55);
+    padding: 0.8rem;
+}
+
+.site-footer__outer p {
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}

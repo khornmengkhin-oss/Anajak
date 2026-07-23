@@ -69,3 +69,43 @@ const observer = new IntersectionObserver((entries) => {
 counters.forEach((counter) => {
     observer.observe(counter);
 });
+
+const videoTrigger = document.querySelector(".video-trigger");
+const videoModal = document.getElementById("video-modal");
+const restaurantVideo = document.getElementById("restaurant-video");
+const videoCloseButtons = document.querySelectorAll("[data-video-close]");
+const restaurantVideoSource = restaurantVideo ? restaurantVideo.dataset.videoSrc : "";
+
+function openVideoModal() {
+    if (!videoModal || !restaurantVideo) {
+        return;
+    }
+
+    restaurantVideo.src = restaurantVideoSource;
+    videoModal.hidden = false;
+    document.body.classList.add("video-modal-open");
+}
+
+function closeVideoModal() {
+    if (!videoModal || !restaurantVideo) {
+        return;
+    }
+
+    videoModal.hidden = true;
+    document.body.classList.remove("video-modal-open");
+    restaurantVideo.removeAttribute("src");
+}
+
+if (videoTrigger) {
+    videoTrigger.addEventListener("click", openVideoModal);
+}
+
+videoCloseButtons.forEach((button) => {
+    button.addEventListener("click", closeVideoModal);
+});
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && videoModal && !videoModal.hidden) {
+        closeVideoModal();
+    }
+});

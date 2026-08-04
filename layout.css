@@ -32,6 +32,11 @@
     gap: 2rem;
 }
 
+.nav-toggle,
+.hamburger {
+    display: none;
+}
+
 .site-nav a {
     margin: 0;
     font-family: "Inter", sans-serif;
@@ -124,7 +129,7 @@ footer p {
     color: rgba(255, 255, 255, 0.7);
     font-family: "Inter", sans-serif;
     font-size: 0.9rem;
-    line-height: 0.8;
+    line-height: 1.5;
 }
 
 footer > div > div > div:last-child h3 {
@@ -162,4 +167,123 @@ footer > div > div > div:last-child h3 {
     font-family: "Inter", sans-serif;
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 900px) {
+    .site-header__inner {
+        padding: 10px 20px;
+        gap: 1rem;
+    }
+
+    .site-name {
+        font-size: 1.8rem;
+    }
+
+    .site-nav {
+        gap: 1rem;
+    }
+
+    .site-nav a {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        font-size: 1rem;
+        padding: 6px 15px;
+    }
+
+    .site-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .site-footer__inner {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .site-footer__inner h3 {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-header__inner {
+        flex-wrap: wrap;
+        padding: 10px 20px;
+    }
+
+    .site-name {
+        font-size: 1.6rem;
+    }
+
+    .nav-toggle {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .hamburger {
+        width: 42px;
+        height: 42px;
+        margin-left: auto;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        width: 22px;
+        height: 2px;
+        background-color: #000000;
+        transition: 0.3s;
+    }
+
+    .site-nav,
+    .site-header__inner > .button {
+        display: none;
+        width: 100%;
+    }
+
+    .site-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding-top: 1rem;
+    }
+
+    .site-header__inner > .button {
+        margin-top: 0.75rem;
+        text-align: center;
+    }
+
+    .nav-toggle:checked ~ .site-nav,
+    .nav-toggle:checked ~ .button {
+        display: flex;
+    }
+
+    .nav-toggle:checked ~ .button {
+        justify-content: center;
+    }
+
+    .nav-toggle:checked + .hamburger span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-toggle:checked + .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle:checked + .hamburger span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
 }

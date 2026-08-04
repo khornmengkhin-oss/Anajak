@@ -4,7 +4,6 @@ nav a[href="index.html"]::after {
 
 .hero-section {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: 4rem;
@@ -247,4 +246,69 @@ body.video-modal-open {
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+@media (max-width: 900px) {
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 2rem;
+    }
+
+    .hero-section__inner {
+        text-align: center;
+        width: 80%;
+    }
+
+    .hero-section__inner .hero-button {
+        justify-content: center;
+    }
+
+    #hero-changing-image {
+        width: 100%;
+    }
+
+    .extra-info {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin: 0 2rem;
+    }
+
+    .card {
+        font-size: 1rem;
+    }
+
+    .page {
+        margin: 2rem 0;
+    }
+
+    .anajak-background__inner {
+        gap: 1rem;
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-section {
+        padding: 0 1rem;
+    }
+
+    .hero-section__inner h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section__inner p {
+        font-size: 1.2rem;
+    }
+
+    .anajak-background__inner p {
+        font-size: 1.8rem;
+    }
+
+    .anajak-background__inner span {
+        font-size: 1rem;
+    }
 }

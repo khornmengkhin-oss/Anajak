@@ -1,3 +1,116 @@
 nav a[href="menu.html"]::after {
     width: 100%;
 }
+
+.menu-info {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.menu-info span {
+    color: var(--color-text);
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    font-family: "Cinzel", serif;
+}
+
+#main-text {
+    color: var(--color-main);
+}
+
+.menu-tabs {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    padding: 1rem 2rem;
+    justify-content: center;
+}
+
+.menu-tabs a {
+    color: var(--color-ink);
+    text-decoration: none;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid #dddddd;
+    font-family: "Inter", sans-serif;
+}
+
+.menu-tabs a[aria-current="page"] {
+    color: var(--color-main);
+    border-bottom-color: var(--color-main);
+}
+
+.menu-card {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: start;
+    padding: 4rem;
+    gap: 2rem;
+}
+
+.card {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    text-align: center;
+}
+
+.card h2 {
+    font-family: "Cinzel", serif;
+    color: var(--color-ink);
+    font-size: 1.5rem;
+    padding: 0;
+    font-weight: 400;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+}
+
+.card p {
+    color: var(--color-ink);
+    font-size: 1rem;
+    padding: 0;
+    font-weight: 300;
+    margin: 0.5rem;
+}
+
+.card span {
+    color: var(--color-main);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.menu-card .card {
+    width: min(100%, 280px);
+    align-items: center;
+}
+
+.menu-card .card[hidden] {
+    display: none;
+}
+
+.menu-card .card img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .menu-card {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+        gap: 2.5rem 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-card {
+        grid-template-columns: minmax(220px, 1fr);
+    }
+}

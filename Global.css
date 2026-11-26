@@ -41,3 +41,12 @@ main {
 .page {
     margin-top: 5rem;
 }
+
+.eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 0.85rem;
+    color: var(--color-main);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.5rem;
+}

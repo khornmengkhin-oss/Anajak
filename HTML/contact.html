@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anajak</title>
+    <title>Contact &amp; Pickup | ANAJAK</title>
 
     <link rel="stylesheet" href="../Global.css">
     <link rel="stylesheet" href="../layout.css">
@@ -38,7 +38,64 @@
           <a class="button" href="contact.html">Book a table</a>
         </div>
     </header>
-    <main></main>
+    <main class="contact-page">
+      <section class="contact-hero">
+        <div class="contact-hero__copy">
+          <p class="eyebrow">A little closer to the table</p>
+          <h1>Good food,<br><em>right on time.</em></h1>
+          <p>Order your Anajak favorites for pickup, or get in touch with our team. Freshly prepared and ready when you are.</p>
+          <div class="contact-hero__actions">
+            <a class="primary-action" href="#pickup"><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i> Order for Pickup</a>
+            <a class="text-action" href="#track"><i class="fa-solid fa-location-crosshairs" aria-hidden="true"></i> Track My Order</a>
+          </div>
+          <div class="hero-note"><span class="status-dot"></span> Pickup orders · Mon–Sat, 7am–11pm</div>
+        </div>
+        <div class="contact-hero__image" role="img" aria-label="A freshly prepared meal ready to share"><div class="image-caption"><span>Made fresh, made with care</span><i class="fa-solid fa-arrow-down" aria-hidden="true"></i></div></div>
+      </section>
+
+      <section class="contact-details" aria-label="Restaurant contact information">
+        <div><span class="detail-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span><div><small>Find us</small><p>National Road Number 5<br>Svay Chrum, Rolea B'eir, Kompong Chnang</p></div></div>
+        <div><span class="detail-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span><div><small>Call or email</small><p><a href="tel:+85569509399">+855 695 093 99</a><br><a href="mailto:khornmengkhin@gmail.com">khornmengkhin@gmail.com</a></p></div></div>
+        <div><span class="detail-icon"><i class="fa-regular fa-clock" aria-hidden="true"></i></span><div><small>Opening hours</small><p>Monday–Saturday · 7am–11pm<br>Sunday · Closed</p></div></div>
+      </section>
+
+      <section class="pickup-section" id="pickup">
+        <div class="section-heading"><div><p class="eyebrow">Skip the wait</p><h2>Order for pickup</h2><p>Choose your favorites and we’ll have them freshly prepared.</p></div><div class="demo-pill"><span></span> Online ordering demo</div></div>
+        <div class="ordering-layout">
+          <div class="dish-browser">
+            <div class="meal-filter" role="group" aria-label="Filter menu by meal">
+              <button type="button" class="meal-filter__button is-active" data-meal-filter="all" aria-pressed="true">All dishes</button>
+              <button type="button" class="meal-filter__button" data-meal-filter="breakfast" aria-pressed="false">Breakfast</button>
+              <button type="button" class="meal-filter__button" data-meal-filter="lunch" aria-pressed="false">Lunch</button>
+              <button type="button" class="meal-filter__button" data-meal-filter="dinner" aria-pressed="false">Dinner</button>
+            </div>
+            <div class="dish-grid" id="dish-list" aria-live="polite"></div>
+          </div>
+          <aside class="cart-panel" aria-labelledby="cart-heading">
+            <div class="cart-panel__title"><div><p class="eyebrow">Your order</p><h3 id="cart-heading">Pickup basket <span id="cart-count">0</span></h3></div><i class="fa-solid fa-basket-shopping" aria-hidden="true"></i></div>
+            <div id="cart-items" class="cart-items"></div><div class="cart-empty" id="cart-empty"><i class="fa-solid fa-utensils" aria-hidden="true"></i><p>Your basket is waiting for something delicious.</p></div>
+            <div class="cart-total"><span>Total</span><strong id="cart-total">$0.00</strong></div>
+            <form id="checkout-form" class="checkout-form">
+              <label for="customer-name">Your name</label><input id="customer-name" name="customerName" autocomplete="name" placeholder="Name for the order" required maxlength="70">
+              <label for="customer-phone">Phone number</label><input id="customer-phone" name="customerPhone" type="tel" autocomplete="tel" placeholder="+855 …" required maxlength="30">
+              <label for="pickup-time">Pickup time</label><select id="pickup-time" name="pickupTime"><option value="As soon as possible">As soon as possible</option><option value="In about 15 minutes">In about 15 minutes</option><option value="In about 30 minutes">In about 30 minutes</option><option value="In about 45 minutes">In about 45 minutes</option></select>
+              <label for="order-notes">Notes <span>(optional)</span></label><textarea id="order-notes" name="notes" rows="2" placeholder="Anything we should know?" maxlength="240"></textarea>
+              <button class="primary-action checkout-button" type="submit" id="place-order-button"><i class="fa-solid fa-check" aria-hidden="true"></i> Place pickup order</button>
+              <p class="form-feedback" id="checkout-feedback" role="status" aria-live="polite"></p><p class="privacy-note"><i class="fa-solid fa-lock" aria-hidden="true"></i> Demo order details stay in this browser.</p>
+            </form>
+            <div id="order-confirmation" class="order-confirmation" hidden aria-live="polite"></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="tracking-section" id="track">
+        <div class="tracking-intro"><p class="eyebrow">Here for the good part</p><h2>Track my order</h2><p>Enter the secure tracking link from your confirmation to see the latest kitchen update.</p></div>
+        <form id="tracking-form" class="tracking-form"><label for="tracking-reference">Order tracking link or reference</label><div class="tracking-input-row"><input id="tracking-reference" name="tracking" placeholder="Paste your tracking link or order reference" autocomplete="off"><button type="submit" class="outline-action">Find my order <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button></div><p id="tracking-feedback" class="form-feedback" role="status" aria-live="polite"></p></form>
+        <div id="tracking-result" class="tracking-result" hidden aria-live="polite"></div>
+      </section>
+
+      <section class="contact-message"><div><p class="eyebrow">We’re happy to help</p><h2>Let’s talk.</h2><p>For table reservations, events, or anything else, our team would love to hear from you.</p></div><div class="contact-message__actions"><a href="tel:+85569509399"><i class="fa-solid fa-phone" aria-hidden="true"></i> +855 695 093 99</a><a href="mailto:khornmengkhin@gmail.com"><i class="fa-regular fa-envelope" aria-hidden="true"></i> Send us an email</a></div></section>
+    </main>
     <footer>
         <div class="site-footer">
             <div class="site-footer__inner">
@@ -78,5 +135,7 @@
             </div>
         </div>
     </footer>
+    <script src="../JS/order-data.js"></script>
+    <script src="../JS/contact.js"></script>
 </body>
 </html>

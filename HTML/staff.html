@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kitchen Dashboard | ANAJAK</title>
+  <link rel="stylesheet" href="../Global.css"><link rel="stylesheet" href="../layout.css"><link rel="stylesheet" href="../CSS/contact.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:wght@0,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="staff-body">
+  <header class="site-header"><div class="site-header__inner"><a class="site-name" href="contact.html">Anajak</a><span class="staff-header-label"><i class="fa-solid fa-kitchen-set" aria-hidden="true"></i> Kitchen dashboard</span><a class="staff-exit" href="contact.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Customer page</a></div></header>
+  <main class="staff-page">
+    <div class="staff-demo-notice"><i class="fa-solid fa-flask" aria-hidden="true"></i><div><strong>Development demo workspace</strong><span>Orders and menu availability are stored in this browser only. This staff view has no production authentication and must not be deployed as a public control panel.</span></div></div>
+    <section class="staff-heading"><div><p class="eyebrow">ANAJAK · PICKUP</p><h1>Kitchen orders</h1><p>Keep each order moving. Your updates appear on the customer tracking page.</p></div><div class="staff-live"><span></span> Live demo sync</div></section>
+
+    <section class="staff-section" aria-labelledby="orders-heading"><div class="staff-section-heading"><div><p class="eyebrow">Service queue</p><h2 id="orders-heading">Incoming orders <span id="open-order-count" class="section-count">0</span></h2></div><span class="staff-local-time" id="staff-current-time"></span></div><div id="kitchen-orders" class="kitchen-orders"></div></section>
+
+    <section class="staff-section" aria-labelledby="soldout-heading"><div class="staff-section-heading"><div><p class="eyebrow">Menu availability</p><h2 id="soldout-heading">Sold out controls</h2><p>Changes take effect immediately on the pickup ordering page.</p></div></div><div id="availability-list" class="availability-list"></div></section>
+
+    <section class="staff-section sales-section" aria-labelledby="sales-heading"><div class="staff-section-heading"><div><p class="eyebrow">End of day</p><h2 id="sales-heading">Daily sales report</h2><p>Completed orders, using their recorded order prices.</p></div><label class="report-date-label" for="report-date">Report date<input type="date" id="report-date"></label></div><div id="sales-report" class="sales-report"></div></section>
+  </main>
+  <footer><div class="site-footer__outer"><p>ANAJAK · Development demo · Phnom Penh time</p></div></footer>
+  <script src="../JS/order-data.js"></script><script src="../JS/staff.js"></script>
+</body>
+</html>

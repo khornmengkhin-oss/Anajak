@@ -102,6 +102,11 @@ nav a[href="menu.html"]::after {
     display: block;
 }
 
+.menu-card .card[data-meal="dinner"] img {
+    height: 280px;
+    object-fit: contain;
+}
+
 @media (max-width: 900px) {
     .menu-card {
         grid-template-columns: repeat(2, minmax(220px, 1fr));
